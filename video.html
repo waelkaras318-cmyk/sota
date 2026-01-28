@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Streamly — Home</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <!-- Add favicon here if desired -->
+</head>
+<body>
+  <!-- Top navbar -->
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="index.html">
+        <!-- Simple inline SVG logo -->
+        <img src="assets/logo.svg" alt="Streamly logo" class="logo" />
+        <span>Streamly</span>
+      </a>
+
+      <div class="search-wrap">
+        <input id="searchInput" type="search" placeholder="Search videos, categories..." />
+        <button id="searchBtn">Search</button>
+      </div>
+
+      <nav class="actions">
+        <button id="loginBtn" class="btn">Login</button>
+        <button id="registerBtn" class="btn btn-outline">Register</button>
+        <div class="menu">
+          <a href="upload.html">Upload</a>
+          <a href="subscriptions.html">Subscription</a>
+          <a href="live.html">Live</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main-grid">
+    <!-- Sidebar: categories -->
+    <aside class="sidebar">
+      <h3>Categories</h3>
+      <ul id="categoriesList" class="categories">
+        <!-- Filled by JS -->
+      </ul>
+
+      <!-- AdSense banner placeholder (commented where code should go) -->
+      <div class="ad ad-banner">
+        <!-- TODO: Replace this placeholder with Google AdSense code:
+             Example:
+             <ins class="adsbygoogle"
+                  style="display:block"
+                  data-ad-client="ca-pub-XXXXXXXXXX"
+                  data-ad-slot="YYYYYYYY"
+                  data-ad-format="auto"></ins>
+             <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        -->
+        <div class="ad-placeholder">AdSense banner placeholder</div>
+      </div>
+    </aside>
+
+    <!-- Main content: recommended, trending, search results -->
+    <section class="content">
+      <h2>Featured</h2>
+
+      <!-- Video grid -->
+      <div id="videoGrid" class="video-grid">
+        <!-- Filled by JS -->
+      </div>
+
+      <div id="noResults" class="muted" style="display:none;">No videos found.</div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <span>© Streamly — Frontend demo. Deploy on GitHub Pages.</span>
+      <nav>
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </div>
+  </footer>
+  <script src="js/app.js"></script>
+  <!-- player-related helpers used on other pages -->
+  <script src="js/player.js"></script>
+</body>
+</html>
