@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Streamly — Upload</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.svg" alt="Streamly logo" class="logo" />
+        <span>Streamly</span>
+      </a>
+      <nav class="actions">
+        <a href="index.html" class="btn btn-outline">Home</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="upload-panel">
+      <h2>Upload Video (mocked)</h2>
+      <p class="muted">This upload is simulated in the frontend only. The video file is not uploaded to a server.</p>
+
+      <form id="uploadForm" class="form">
+        <label>Title
+          <input id="uploadTitle" type="text" required />
+        </label>
+
+        <label>Description
+          <textarea id="uploadDesc" rows="4"></textarea>
+        </label>
+
+        <label>Category
+          <select id="uploadCategory">
+            <option>Entertainment</option>
+            <option>Education</option>
+            <option>Gaming</option>
+            <option>Music</option>
+            <option>Sports</option>
+            <option>News</option>
+            <option>Other</option>
+          </select>
+        </label>
+
+        <label>Video file (mock)
+          <!-- In a real app you'd upload a file. Here we accept URL or ignore -->
+          <input id="uploadUrl" type="url" placeholder="Optional video URL (mp4)"/>
+        </label>
+
+        <button class="btn" type="submit">Upload (simulate)</button>
+      </form>
+
+      <div id="uploadStatus" class="muted"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <span>© Streamly — Frontend demo.</span>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
