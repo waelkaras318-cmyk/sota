@@ -1,0 +1,192 @@
+/* Streamly — styles.css
+   Clean, responsive layout. Comments explain CSS sections.
+*/
+
+/* Basic reset and variables */
+:root{
+  --bg:#0f1724;
+  --card:#0b1220;
+  --muted:#9aa6b2;
+  --accent:#ff4a57;
+  --glass: rgba(255,255,255,0.03);
+  --max-width:1100px;
+  --gap:16px;
+  --radius:10px;
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background:linear-gradient(180deg,#071027 0%, #071823 100%);
+  color: #e6eef6;
+  font-family:var(--font-sans);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* Container */
+.container{
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding:16px;
+}
+
+/* Topbar */
+.topbar{
+  background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+.topbar-inner{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  text-decoration:none;
+  color:inherit;
+}
+.logo{width:36px;height:36px}
+
+/* Search */
+.search-wrap{
+  flex:1;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.search-wrap input[type="search"]{
+  flex:1;
+  padding:10px 12px;
+  border-radius:8px;
+  border:1px solid rgba(255,255,255,0.04);
+  background:var(--glass);
+  color:inherit;
+}
+.search-wrap button{
+  padding:10px 12px;
+  border-radius:8px;
+  background:var(--accent);
+  color:white;
+  border:none;
+  cursor:pointer;
+}
+
+/* Actions */
+.actions{display:flex;align-items:center;gap:8px}
+.btn{
+  padding:8px 12px;
+  background:var(--glass);
+  border:1px solid rgba(255,255,255,0.03);
+  color:inherit;
+  border-radius:8px;
+  cursor:pointer;
+}
+.btn-outline{background:transparent;border:1px solid rgba(255,255,255,0.06)}
+
+/* Main layout */
+.main-grid{
+  display:grid;
+  grid-template-columns: 240px 1fr;
+  gap:var(--gap);
+  padding-top:18px;
+}
+
+/* Sidebar */
+.sidebar{position:sticky; top:16px; align-self:start}
+.categories{list-style:none;padding:0;margin:12px 0 0}
+.categories li{padding:8px 6px;border-radius:8px;cursor:pointer}
+.categories li:hover{background:rgba(255,255,255,0.02)}
+
+/* Video grid */
+.video-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fill,minmax(220px,1fr));
+  gap:14px;
+  margin-top:12px;
+}
+.card{
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius:var(--radius);
+  padding:12px;
+  overflow:hidden;
+}
+
+/* video thumbnail */
+.thumb{
+  width:100%;
+  height:130px;
+  border-radius:8px;
+  background:#0b1220 center/cover no-repeat;
+  display:flex;
+  align-items:end;
+  justify-content:left;
+  color:white;
+  padding:8px;
+  gap:8px;
+  position:relative;
+}
+.duration{
+  position:absolute;
+  bottom:8px;
+  right:8px;
+  background:rgba(0,0,0,0.6);
+  padding:4px 6px;
+  border-radius:6px;
+  font-size:12px;
+}
+
+/* Video page layout */
+.video-page{
+  display:grid;
+  grid-template-columns: 1fr 360px;
+  gap:18px;
+  padding-top:18px;
+}
+.player-wrap video{
+  width:100%;
+  border-radius:10px;
+  background:black;
+}
+.video-ad{margin-top:8px}
+
+/* recommended list */
+.recommended-list{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+.recommended-item{display:flex;gap:10px;align-items:center}
+.recommended-item img{width:120px;height:70px;object-fit:cover;border-radius:6px}
+
+/* Upload form */
+.upload-panel .form{display:flex;flex-direction:column;gap:10px;max-width:700px}
+.upload-panel label{display:flex;flex-direction:column;gap:6px}
+.upload-panel input, .upload-panel textarea, .upload-panel select{
+  padding:8px;border-radius:8px;background:var(--glass);border:1px solid rgba(255,255,255,0.03);color:inherit;
+}
+
+/* Plans */
+.plan-grid{display:flex;gap:18px;flex-wrap:wrap;margin-top:12px}
+.plan{flex:1;min-width:260px;padding:16px}
+.plan-premium{border:1px solid rgba(255,255,255,0.06);box-shadow:0 4px 20px rgba(0,0,0,0.4)}
+
+/* Footer */
+.footer{padding:18px 0;color:var(--muted);border-top:1px solid rgba(255,255,255,0.02);margin-top:24px}
+
+/* Utilities */
+.container .muted{color:var(--muted)}
+.ad{margin-top:14px;padding:10px;border-radius:8px;background:rgba(255,255,255,0.02);text-align:center}
+.ad-placeholder{padding:18px;border-radius:8px;background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));color:var(--muted)}
+
+/* Responsive */
+@media (max-width:900px){
+  .main-grid{grid-template-columns:1fr; padding-top:10px}
+  .video-page{grid-template-columns:1fr; padding-top:10px}
+  .sidebar{position:static}
+  .search-wrap{display:none}
+}
