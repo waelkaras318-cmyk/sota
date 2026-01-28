@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Streamly — Live</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.svg" alt="Streamly logo" class="logo" />
+        <span>Streamly</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="container live-page">
+    <section class="live-panel">
+      <h2>Live Streaming</h2>
+
+      <div id="liveAccess" class="card">
+        <!-- Content filled by JS depending on subscription -->
+      </div>
+
+      <div class="muted">
+        Live streaming UI is mocked. In production you'd integrate WebRTC or a streaming CDN here.
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <span>© Streamly — Frontend demo.</span>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
