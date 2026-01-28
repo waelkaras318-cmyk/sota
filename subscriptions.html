@@ -1,0 +1,59 @@
+  <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Streamly — Subscription</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.svg" alt="Streamly logo" class="logo" />
+        <span>Streamly</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="plans">
+      <h2>Subscription Plans</h2>
+
+      <div class="plan-grid">
+        <div class="plan card">
+          <h3>Free</h3>
+          <p>Cost: $0 / month</p>
+          <ul>
+            <li>Ads shown (placeholders)</li>
+            <li>Limited features</li>
+            <li>No live streaming access</li>
+          </ul>
+          <button id="chooseFree" class="btn btn-outline">Use Free</button>
+        </div>
+
+        <div class="plan card plan-premium">
+          <h3>Premium</h3>
+          <p>Cost: $4.99 / month (simulated)</p>
+          <ul>
+            <li>No ads</li>
+            <li>Access to Live Streaming</li>
+            <li>Priority recommendations</li>
+          </ul>
+          <button id="choosePremium" class="btn">Become Premium (simulate)</button>
+        </div>
+      </div>
+
+      <p class="muted">Note: Payment flow is mocked in this demo. Replace with real payment provider on production.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <span>© Streamly — Frontend demo.</span>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
