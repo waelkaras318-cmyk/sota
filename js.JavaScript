@@ -139,3 +139,11 @@ function updateAuthUI(isLoggedIn){
 document.addEventListener('DOMContentLoaded', () => {
   updateAuthUI(!!getToken());
 });
+async function requestPresign(filename, contentType){
+  const res = await authFetch('/uploads/presign', {
+    method: 'POST',
+    body: JSON.stringify({ filename, content_type: contentType })
+  });
+  if(!res.ok) throw new Error('Presign failed');
+  return res.json();
+}
